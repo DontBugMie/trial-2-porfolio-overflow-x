@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
+*,
+*::after,
+*::before{
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    box-sizing: border-box;
+    font-size: 17rem;
+    color:white;
+}
+
+nav{
+    background-color: chartreuse;
+    font-size:1rem;
+    padding:2rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgba(255, 0, 179, 0.308);
+    text-align: center;
+}
+
+.wrapper{
+    overflow-x: hidden;
+    position: relative;
+}
+
+.hero__maya,
+.hero__wright {
+    color:green;
+    animation:move 17s ease-in infinite;
+    font-family: 'alfa slab one', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15rem;
+}
+
+.hero__web, 
+.hero__portfolio{
+    color:grey;
+    font-size: 5rem;
+    z-index: 1;
+    font-family: 'Monsieur La Doulaise', cursive;
+}
+
+.hero__wright,
+.hero__portfolio{
+    bottom: 0;
+    position: absolute;
+}
+
+.hero__maya,
+.hero__web{
+        transform: translate(-60%,0%);
+        position: absolute;
+}
+
+.hero__web{
+    transform: translateY(150%);
+}
+
+.hero__portfolio{
+    transform:translate(50%,-100%);
+    z-index: 4;
+}
+
+.hero__wright{
+    transform: translateX(40%);
+    z-index: 3;
+}
+
+@keyframes move{
+    0%{
+        color:aqua;
+    }
+    50%{
+        text-shadow: 0 15px 40px rgb(102, 81, 84);
+        color: aqua;
+    }
+    100%{
+        color:aqua;
+    } 
+} 
+
+canvas{
+    height:100vh;
+    width:105%;
+    top:0;
+    position: absolute;
+    z-index:2;
+    background-color: transparent;
+}
